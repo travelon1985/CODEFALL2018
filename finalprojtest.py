@@ -11,7 +11,7 @@ def implied():
   counter = 0
   
   for row in islice(reader, 1, None):
-    if counter < 100:
+    #if counter < 100:
       homeImpliedProbability = 1 / float(row[14])
       awayImpliedProbability = 1 / float(row[15])
       drawImpliedProbability = 1 / float(row[16])
@@ -22,7 +22,7 @@ def implied():
       print counter
       print row
       
-  return reader
+  
 
 
 
@@ -37,28 +37,69 @@ favoriteMatrix = [[0,0,0,0,0],
 def countBinner(reader):
   counter = 0
   matchCounter = 0
+  rowCounter = 0
   for row in islice(reader, 1, None):
-    if counter < 100:
+    if counter < 500:
       #homes greater with a 538 prediction > .5
-      if row[6] > .5:
+      if float(row[6]) > 0.5:
         counter = counter + 1
         print "rows counted: " + str(counter)
-        if row[6] > .5 and row[6] < .6:
+        if float(row[6]) > .5 and float(row[6]) < .6:
           print "rows counted second level: " + str(counter)
-          if row[18] > .3 and row[17] < .4:
-            favoriteMatrix[6][0] = favoriteMatrix[6][0] + 1
-          if row[18] > .39 and row[17] < .5:
-            favoriteMatrix[5][0] = favoriteMatrix[5][0] + 1
-          if row[18] > .49 and row[17] < .6:
-            favoriteMatrix[4][0] = favoriteMatrix[4][0] + 1
-          if row[18] > .59 and row[17] < .7:
-            favoriteMatrix[3][0] = favoriteMatrix[3][0] + 1
-          if row[18] > .69 and row[17] < .8:
+          
+          #less than 1 so .99 and greater than .89 so .90
+          if float(row[17]) < 1 and float(row[17]) > 0.89:
+            favoriteMatrix[0][0] = favoriteMatrix[0][0] + 1
+            
+          #less than .90 so .89 and greater than .79 so .80
+          elif float(row[17]) < 0.90 and float(row[17]) > .79:
+            favoriteMatrix[1][0] = favoriteMatrix[1][0] + 1
+            
+          elif float(row[17]) < 0.80 and float(row[17]) > .69:
             favoriteMatrix[2][0] = favoriteMatrix[2][0] + 1
-          if row[18] > .79 and row[17] < .9:
-            favoriteMatrix[1][0] = favoriteMatrix[1][0] + 1 
-          if row[18] > .89 and row[17] < 1:
-            favoriteMatrix[0][0] = favoriteMatrix[0][0] + 1   
+            
+          elif float(row[17]) < 0.70 and float(row[17]) > .59:
+            favoriteMatrix[3][0] = favoriteMatrix[3][0] + 1
+            
+          elif float(row[17]) < 0.60 and float(row[17]) > .49:
+            favoriteMatrix[4][0] = favoriteMatrix[4][0] + 1
+            
+          elif float(row[17]) < 0.50 and float(row[17]) > .39:
+            favoriteMatrix[5][0] = favoriteMatrix[5][0] + 1
+          
+          elif float(row[17]) < 0.40 and float(row[17]) > .29:
+            favoriteMatrix[6][0] = favoriteMatrix[6][0] + 1
+            
+        
+        if float(row[6]) > .59 and float(row[6]) < .7:
+          print "rows counted second level: " + str(counter)
+          
+          #less than 1 so .99 and greater than .89 so .90
+          if float(row[17]) < 1 and float(row[17]) > 0.89:
+            favoriteMatrix[0][1] = favoriteMatrix[0][1] + 1
+            
+          #less than .90 so .89 and greater than .79 so .80
+          elif float(row[17]) < 0.90 and float(row[17]) > .79:
+            favoriteMatrix[1][1] = favoriteMatrix[1][1] + 1
+            
+          elif float(row[17]) < 0.80 and float(row[17]) > .69:
+            favoriteMatrix[2][1] = favoriteMatrix[2][1] + 1
+            
+          elif float(row[17]) < 0.70 and float(row[17]) > .59:
+            favoriteMatrix[3][1] = favoriteMatrix[3][1] + 1
+            
+          elif float(row[17]) < 0.60 and float(row[17]) > .49:
+            favoriteMatrix[4][1] = favoriteMatrix[4][1] + 1
+            
+          elif float(row[17]) < 0.50 and float(row[17]) > .39:
+            favoriteMatrix[5][1] = favoriteMatrix[5][1] + 1
+          
+          elif float(row[17]) < 0.40 and float(row[17]) > .29:
+            favoriteMatrix[6][1] = favoriteMatrix[6][1] + 1
+        
+            
+          
+            
   print favoriteMatrix
           
       #away
@@ -66,7 +107,7 @@ def countBinner(reader):
         
 homeFiveThirtyEightProb = {}
 homeImpliedProb = {}
-
+homeEdge = {}
 
 def edgeDictionary():
   print "hit"
@@ -84,31 +125,41 @@ def edgeDictionary():
     
     
 def edgeCalculator(dict1, dict2):
-  homeEdge = {}
+  
   print "hit2"
   counter = 0
   for item in dict1:
     fiveThirtyProb = dict1[item]
     impliedProb = dict2[item]
     homeEdge[item] = round(float(fiveThirtyProb) - float(impliedProb),2)
-  return homeEdge
   
+
+
+edgeBins = {} 
 def edgeBinner(dict1):
-  edgeBins = {}
+  
   for item in homeEdge:
+    print "hit3"
     initialFloor = -.29
-    if homeEdge[item] >= initialFloor and < initialFloor + .01:
-      edgeBins
+    adjuster = 0
+    if (homeEdge[item] >= initialFloor + adjuster) and homeEdge[item] < (initialFloor + .02 + adjuster):
+      edgeBins[item] = 0
+      adjuster = adjuster + .02
       
-    
-                
+  for item in homeEdge:
+    print "hit4"
+    initialFloor = -.29
+    if (homeEdge[item] >= initialFloor) and homeEdge[item]< (initialFloor + .02):
+      edgeBins[item] = edgeBins[item] + 1
+      
+                     
 
 def setup():
   #implied()
-  #countBinner(reader)
+  countBinner(reader)
   edgeDictionary()
   edgeCalculator(homeFiveThirtyEightProb, homeImpliedProb)
-    
+  edgeBinner(homeEdge)
 
   
 setup()
