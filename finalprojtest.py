@@ -97,6 +97,84 @@ def countBinner(reader):
           elif float(row[17]) < 0.40 and float(row[17]) > .29:
             favoriteMatrix[6][1] = favoriteMatrix[6][1] + 1
         
+        if float(row[6]) > .69 and float(row[6]) < .8:
+          print "rows counted second level: " + str(counter)
+          
+          #less than 1 so .99 and greater than .89 so .90
+          if float(row[17]) < 1 and float(row[17]) > 0.89:
+            favoriteMatrix[0][2] = favoriteMatrix[0][2] + 1
+            
+          #less than .90 so .89 and greater than .79 so .80
+          elif float(row[17]) < 0.90 and float(row[17]) > .79:
+            favoriteMatrix[1][2] = favoriteMatrix[1][2] + 1
+            
+          elif float(row[17]) < 0.80 and float(row[17]) > .69:
+            favoriteMatrix[2][2] = favoriteMatrix[2][2] + 1
+            
+          elif float(row[17]) < 0.70 and float(row[17]) > .59:
+            favoriteMatrix[3][2] = favoriteMatrix[3][2] + 1
+            
+          elif float(row[17]) < 0.60 and float(row[17]) > .49:
+            favoriteMatrix[4][2] = favoriteMatrix[4][2] + 1
+            
+          elif float(row[17]) < 0.50 and float(row[17]) > .39:
+            favoriteMatrix[5][2] = favoriteMatrix[5][2] + 1
+          
+          elif float(row[17]) < 0.40 and float(row[17]) > .29:
+            favoriteMatrix[6][2] = favoriteMatrix[6][2] + 1
+            
+        if float(row[6]) > .79 and float(row[6]) < .9:
+          print "rows counted second level: " + str(counter)
+          
+          #less than 1 so .99 and greater than .89 so .90
+          if float(row[17]) < 1 and float(row[17]) > 0.89:
+            favoriteMatrix[0][3] = favoriteMatrix[0][3] + 1
+            
+          #less than .90 so .89 and greater than .79 so .80
+          elif float(row[17]) < 0.90 and float(row[17]) > .79:
+            favoriteMatrix[1][3] = favoriteMatrix[1][3] + 1
+            
+          elif float(row[17]) < 0.80 and float(row[17]) > .69:
+            favoriteMatrix[2][3] = favoriteMatrix[2][3] + 1
+            
+          elif float(row[17]) < 0.70 and float(row[17]) > .59:
+            favoriteMatrix[3][3] = favoriteMatrix[3][3] + 1
+            
+          elif float(row[17]) < 0.60 and float(row[17]) > .49:
+            favoriteMatrix[4][3] = favoriteMatrix[4][3] + 1
+            
+          elif float(row[17]) < 0.50 and float(row[17]) > .39:
+            favoriteMatrix[5][3] = favoriteMatrix[5][3] + 1
+          
+          elif float(row[17]) < 0.40 and float(row[17]) > .29:
+            favoriteMatrix[6][3] = favoriteMatrix[6][3] + 1
+            
+        if float(row[6]) > .89 and float(row[6]) < 1:
+          print "rows counted second level: " + str(counter)
+          
+          #less than 1 so .99 and greater than .89 so .90
+          if float(row[17]) < 1 and float(row[17]) > 0.89:
+            favoriteMatrix[0][4] = favoriteMatrix[0][4] + 1
+            
+          #less than .90 so .89 and greater than .79 so .80
+          elif float(row[17]) < 0.90 and float(row[17]) > .79:
+            favoriteMatrix[1][4] = favoriteMatrix[1][4] + 1
+            
+          elif float(row[17]) < 0.80 and float(row[17]) > .69:
+            favoriteMatrix[2][4] = favoriteMatrix[2][4] + 1
+            
+          elif float(row[17]) < 0.70 and float(row[17]) > .59:
+            favoriteMatrix[3][4] = favoriteMatrix[3][4] + 1
+            
+          elif float(row[17]) < 0.60 and float(row[17]) > .49:
+            favoriteMatrix[4][4] = favoriteMatrix[4][4] + 1
+            
+          elif float(row[17]) < 0.50 and float(row[17]) > .39:
+            favoriteMatrix[5][4] = favoriteMatrix[5][4] + 1
+          
+          elif float(row[17]) < 0.40 and float(row[17]) > .29:
+            favoriteMatrix[6][4] = favoriteMatrix[6][4] + 1
+       
             
           
             
