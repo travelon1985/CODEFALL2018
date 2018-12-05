@@ -343,11 +343,12 @@ favoriteMatrixA = [[0,0,0,0,0],
 
 def awayCountBinnerOnlyAway(reader):
   print("start away")
-  counter = 0
+  counter2 = 0
   matchCounter = 0
   rowCounter = 0
   for row in islice(reader, 1, None):
-    if counter < 500:
+    if counter2 < 500:
+      print("away counter2")
       #homes greater with a 538 prediction > .5
       if float(row[7]) > 0.5:
         counter = counter + 1
