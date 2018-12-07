@@ -55,38 +55,119 @@ def binner2(localCSV, favoriteMatrix, awayMatrix):
     impliedProbHome = float(row[17])
     if fiveThirtyHome >= 0.5:
 #five thirty eight home prob between .90 and 1 (>.89999 and <1)
-      if fiveThirtyHome >= 0.89999 and fiveThirtyHome < 1:
-        if impliedProbHome > 0.89999 and impliedProbHome < 1:
+      if fiveThirtyHome >= 0.9 and fiveThirtyHome < 1:
+        if impliedProbHome >= 0.9 and impliedProbHome < 1:
           favoriteMatrix[0][4] = favoriteMatrix[0][4] + 1
-        elif impliedProbHome >= 0.8 and impliedProbHome <= 0.89:
+
+        elif impliedProbHome >= 0.8 and impliedProbHome < 0.89999:
           favoriteMatrix[1][4] = favoriteMatrix[1][4] + 1
-        elif impliedProbHome >= 0.7 and impliedProbHome <= 0.79:
+
+        elif impliedProbHome >= 0.7 and impliedProbHome < 0.79999:
           favoriteMatrix[2][4] = favoriteMatrix[2][4] + 1
-        elif impliedProbHome >= 0.6 and impliedProbHome <= 0.69:
+
+        elif impliedProbHome >= 0.6 and impliedProbHome < 0.69999:
           favoriteMatrix[3][4] = favoriteMatrix[3][4] + 1
-        elif impliedProbHome >= 0.5 and impliedProbHome <= 0.59:
+
+        elif impliedProbHome >= 0.5 and impliedProbHome < 0.59999:
           favoriteMatrix[4][4] = favoriteMatrix[4][4] + 1
-        elif impliedProbHome >= 0.4 and impliedProbHome <= 0.49:
+
+        elif impliedProbHome >= 0.4 and impliedProbHome < 0.49999:
           favoriteMatrix[5][4] = favoriteMatrix[5][4] + 1
-        elif impliedProbHome >= 0.3 and impliedProbHome <= 0.39:
+
+        elif impliedProbHome >= 0.3 and impliedProbHome < 0.39999:
           favoriteMatrix[6][4] = favoriteMatrix[6][4] + 1
-#five thirty eight home probability between 80 and 89 percent
-      if fiveThirtyHome >= 0.8 and fiveThirtyHome <= .89999:
-        if impliedProbHome >= 0.9 and impliedProbHome <= 1:
+
+# #five thirty eight home probability between 80 and 89 percent
+      if fiveThirtyHome >= 0.8 and fiveThirtyHome < .89999:
+        if impliedProbHome >= 0.9 and impliedProbHome < 1:
           favoriteMatrix[0][3] = favoriteMatrix[0][3] + 1
-        elif impliedProbHome >= 0.8 and impliedProbHome <= 0.89:
+
+        elif impliedProbHome >= 0.8 and impliedProbHome < 0.89999:
           favoriteMatrix[1][3] = favoriteMatrix[1][3] + 1
-        elif impliedProbHome >= 0.7 and impliedProbHome <= 0.79:
+
+        elif impliedProbHome >= 0.7 and impliedProbHome < 0.79999:
           favoriteMatrix[2][3] = favoriteMatrix[2][3] + 1
-        elif impliedProbHome >= 0.6 and impliedProbHome <= 0.69:
+
+        elif impliedProbHome >= 0.6 and impliedProbHome < 0.69999:
           favoriteMatrix[3][3] = favoriteMatrix[3][3] + 1
-        elif impliedProbHome >= 0.5 and impliedProbHome <= 0.59:
+
+        elif impliedProbHome >= 0.5 and impliedProbHome < 0.59999:
           favoriteMatrix[4][3] = favoriteMatrix[4][3] + 1
-        elif impliedProbHome >= 0.4 and impliedProbHome <= 0.49:
+
+        elif impliedProbHome >= 0.4 and impliedProbHome < 0.49999:
           favoriteMatrix[5][3] = favoriteMatrix[5][3] + 1
-        elif impliedProbHome >= 0.3 and impliedProbHome <= 0.39:
+
+        elif impliedProbHome >= 0.3 and impliedProbHome < 0.39999:
           favoriteMatrix[6][3] = favoriteMatrix[6][3] + 1
 
+# #five thirty eight home probability between 70 and 79 percent
+      if fiveThirtyHome >= 0.7 and fiveThirtyHome < .79999:
+        if impliedProbHome >= 0.9 and impliedProbHome < 1:
+          favoriteMatrix[0][2] = favoriteMatrix[0][2] + 1
+
+        elif impliedProbHome >= 0.8 and impliedProbHome < 0.89999:
+          favoriteMatrix[1][2] = favoriteMatrix[1][2] + 1
+
+        elif impliedProbHome >= 0.7 and impliedProbHome < 0.79999:
+          favoriteMatrix[2][2] = favoriteMatrix[2][2] + 1
+
+        elif impliedProbHome >= 0.6 and impliedProbHome < 0.69999:
+          favoriteMatrix[3][2] = favoriteMatrix[3][2] + 1
+
+        elif impliedProbHome >= 0.5 and impliedProbHome < 0.59999:
+          favoriteMatrix[4][2] = favoriteMatrix[4][2] + 1
+
+        elif impliedProbHome >= 0.4 and impliedProbHome < 0.49999:
+          favoriteMatrix[5][2] = favoriteMatrix[5][2] + 1
+
+        elif impliedProbHome >= 0.3 and impliedProbHome < 0.39999:
+          favoriteMatrix[6][2] = favoriteMatrix[6][2] + 1
+
+#five thirty eight home probability between 60 and 69 percent
+      if fiveThirtyHome >= 0.6 and fiveThirtyHome < .69999:
+        if impliedProbHome >= 0.9 and impliedProbHome < 1:
+          favoriteMatrix[0][1] = favoriteMatrix[0][1] + 1
+
+        elif impliedProbHome >= 0.8 and impliedProbHome < 0.89999:
+          favoriteMatrix[1][1] = favoriteMatrix[1][1] + 1
+
+        elif impliedProbHome >= 0.7 and impliedProbHome < 0.79999:
+          favoriteMatrix[2][1] = favoriteMatrix[2][1] + 1
+
+        elif impliedProbHome >= 0.6 and impliedProbHome < 0.69999:
+          favoriteMatrix[3][1] = favoriteMatrix[3][1] + 1
+
+        elif impliedProbHome >= 0.5 and impliedProbHome < 0.59999:
+          favoriteMatrix[4][1] = favoriteMatrix[4][1] + 1
+
+        elif impliedProbHome >= 0.4 and impliedProbHome < 0.49999:
+          favoriteMatrix[5][1] = favoriteMatrix[5][1] + 1
+
+        elif impliedProbHome >= 0.3 and impliedProbHome < 0.39999:
+          favoriteMatrix[6][1] = favoriteMatrix[6][1] + 1
+
+#five thirty eight home probability between 50 and 59 percent
+      if fiveThirtyHome >= 0.5 and fiveThirtyHome < .59999:
+        if impliedProbHome >= 0.9 and impliedProbHome < 1:
+          favoriteMatrix[0][0] = favoriteMatrix[0][0] + 1
+
+        elif impliedProbHome >= 0.8 and impliedProbHome < 0.89999:
+          favoriteMatrix[1][0] = favoriteMatrix[1][0] + 1
+
+        elif impliedProbHome >= 0.7 and impliedProbHome < 0.79999:
+          favoriteMatrix[2][0] = favoriteMatrix[2][0] + 1
+
+        elif impliedProbHome >= 0.6 and impliedProbHome < 0.69999:
+          favoriteMatrix[3][0] = favoriteMatrix[3][0] + 1
+
+        elif impliedProbHome >= 0.5 and impliedProbHome < 0.59999:
+          favoriteMatrix[4][0] = favoriteMatrix[4][0] + 1
+
+        elif impliedProbHome >= 0.4 and impliedProbHome < 0.49999:
+          favoriteMatrix[5][0] = favoriteMatrix[5][0] + 1
+
+        elif impliedProbHome >= 0.3 and impliedProbHome < 0.39999:
+          favoriteMatrix[6][0] = favoriteMatrix[6][0] + 1
   print(favoriteMatrix)
 
 # def binner(reader, favoriteMatrix, awayMatrix):
@@ -369,280 +450,278 @@ def binner2(localCSV, favoriteMatrix, awayMatrix):
 #   print(awayMatrix)
 #   print (favoriteMatrix)
 
-def profitBinner(reader, favoriteProfitMatrix, awayProfitMatrix):
-  counterHome = 0
-  counter = 0
-  for row in localCSV:
-      #homes greater with a 538 prediction > .5
-    if float(row[6]) > 0.5:
-      print (favoriteProfitMatrix)
-      counterHome = counterHome + 1
-      print ("rows counted: " + str(counterHome))
-      if float(row[6]) > .5 and float(row[6]) < .6:
-        print ("rows counted second level: " + str(counterHome))
+def profitBinner2(localCSV, favoriteProfitMatrix, awayProfitMatrix):
+  # for row in localCSV:
+  #     #homes greater with a 538 prediction > .5
+  #   if float(row[6]) > 0.5:
+  #     print (favoriteProfitMatrix)
+  #     counterHome = counterHome + 1
+  #     print ("rows counted: " + str(counterHome))
+  #     if float(row[6]) > .5 and float(row[6]) < .6:
+  #       print ("rows counted second level: " + str(counterHome))
         
-        #less than 1 so .99 and greater than .89 so .90
-        if float(row[17]) < 1 and float(row[17]) > 0.89:
-          favoriteProfitMatrix[0][0] = favoriteProfitMatrix[0][0] + round(row[21],2)
+  #       #less than 1 so .99 and greater than .89 so .90
+  #       if float(row[17]) < 1 and float(row[17]) > 0.89:
+  #         favoriteProfitMatrix[0][0] = favoriteProfitMatrix[0][0] + round(row[21],2)
           
-        #less than .90 so .89 and greater than .79 so .80
-        elif float(row[17]) < 0.90 and float(row[17]) > .79:
-          favoriteProfitMatrix[1][0] = favoriteProfitMatrix[1][0] + round(row[21],2)
+  #       #less than .90 so .89 and greater than .79 so .80
+  #       elif float(row[17]) < 0.90 and float(row[17]) > .79:
+  #         favoriteProfitMatrix[1][0] = favoriteProfitMatrix[1][0] + round(row[21],2)
           
-        elif float(row[17]) < 0.80 and float(row[17]) > .69:
-          favoriteProfitMatrix[2][0] = favoriteProfitMatrix[2][0] + round(row[21],2)
+  #       elif float(row[17]) < 0.80 and float(row[17]) > .69:
+  #         favoriteProfitMatrix[2][0] = favoriteProfitMatrix[2][0] + round(row[21],2)
           
-        elif float(row[17]) < 0.70 and float(row[17]) > .59:
-          favoriteProfitMatrix[3][0] = favoriteProfitMatrix[3][0] + round(row[21],2)
+  #       elif float(row[17]) < 0.70 and float(row[17]) > .59:
+  #         favoriteProfitMatrix[3][0] = favoriteProfitMatrix[3][0] + round(row[21],2)
           
-        elif float(row[17]) < 0.60 and float(row[17]) > .49:
-          favoriteProfitMatrix[4][0] = favoriteProfitMatrix[4][0] + round(row[21],2)
+  #       elif float(row[17]) < 0.60 and float(row[17]) > .49:
+  #         favoriteProfitMatrix[4][0] = favoriteProfitMatrix[4][0] + round(row[21],2)
           
-        elif float(row[17]) < 0.50 and float(row[17]) > .39:
-          favoriteProfitMatrix[5][0] = favoriteProfitMatrix[5][0] + round(row[21],2)
+  #       elif float(row[17]) < 0.50 and float(row[17]) > .39:
+  #         favoriteProfitMatrix[5][0] = favoriteProfitMatrix[5][0] + round(row[21],2)
         
-        elif float(row[17]) < 0.40 and float(row[17]) > .29:
-          favoriteProfitMatrix[6][0] = favoriteProfitMatrix[6][0] + round(row[21],2)
+  #       elif float(row[17]) < 0.40 and float(row[17]) > .29:
+  #         favoriteProfitMatrix[6][0] = favoriteProfitMatrix[6][0] + round(row[21],2)
           
       
-      if float(row[6]) > .59 and float(row[6]) < .7:
-        print ("rows counted third level: " + str(counterHome))
+  #     if float(row[6]) > .59 and float(row[6]) < .7:
+  #       print ("rows counted third level: " + str(counterHome))
         
-        #less than 1 so .99 and greater than .89 so .90
-        if float(row[17]) < 1 and float(row[17]) > 0.89:
-          favoriteProfitMatrix[0][1] = favoriteProfitMatrix[0][1] + round(row[21],2)
+  #       #less than 1 so .99 and greater than .89 so .90
+  #       if float(row[17]) < 1 and float(row[17]) > 0.89:
+  #         favoriteProfitMatrix[0][1] = favoriteProfitMatrix[0][1] + round(row[21],2)
           
-        #less than .90 so .89 and greater than .79 so .80
-        elif float(row[17]) < 0.90 and float(row[17]) > .79:
-          favoriteProfitMatrix[1][1] = favoriteProfitMatrix[1][1] + round(row[21],2)
+  #       #less than .90 so .89 and greater than .79 so .80
+  #       elif float(row[17]) < 0.90 and float(row[17]) > .79:
+  #         favoriteProfitMatrix[1][1] = favoriteProfitMatrix[1][1] + round(row[21],2)
           
-        elif float(row[17]) < 0.80 and float(row[17]) > .69:
-          favoriteProfitMatrix[2][1] = favoriteProfitMatrix[2][1] + round(row[21],2)
+  #       elif float(row[17]) < 0.80 and float(row[17]) > .69:
+  #         favoriteProfitMatrix[2][1] = favoriteProfitMatrix[2][1] + round(row[21],2)
           
-        elif float(row[17]) < 0.70 and float(row[17]) > .59:
-          favoriteProfitMatrix[3][1] = favoriteProfitMatrix[3][1] + round(row[21],2)
+  #       elif float(row[17]) < 0.70 and float(row[17]) > .59:
+  #         favoriteProfitMatrix[3][1] = favoriteProfitMatrix[3][1] + round(row[21],2)
           
-        elif float(row[17]) < 0.60 and float(row[17]) > .49:
-          favoriteProfitMatrix[4][1] = favoriteProfitMatrix[4][1] + round(row[21],2)
+  #       elif float(row[17]) < 0.60 and float(row[17]) > .49:
+  #         favoriteProfitMatrix[4][1] = favoriteProfitMatrix[4][1] + round(row[21],2)
           
-        elif float(row[17]) < 0.50 and float(row[17]) > .39:
-          favoriteProfitMatrix[5][1] = favoriteProfitMatrix[5][1] + round(row[21],2)
+  #       elif float(row[17]) < 0.50 and float(row[17]) > .39:
+  #         favoriteProfitMatrix[5][1] = favoriteProfitMatrix[5][1] + round(row[21],2)
         
-        elif float(row[17]) < 0.40 and float(row[17]) > .29:
-          favoriteProfitMatrix[6][1] = favoriteProfitMatrix[6][1] + round(row[21],2)
+  #       elif float(row[17]) < 0.40 and float(row[17]) > .29:
+  #         favoriteProfitMatrix[6][1] = favoriteProfitMatrix[6][1] + round(row[21],2)
       
-      if float(row[6]) > .69 and float(row[6]) < .8:
-        print ("rows counted fourth level: " + str(counterHome))
+  #     if float(row[6]) > .69 and float(row[6]) < .8:
+  #       print ("rows counted fourth level: " + str(counterHome))
         
-        #less than 1 so .99 and greater than .89 so .90
-        if float(row[17]) < 1 and float(row[17]) > 0.89:
-          favoriteProfitMatrix[0][2] = favoriteProfitMatrix[0][2] + round(row[21],2)
+  #       #less than 1 so .99 and greater than .89 so .90
+  #       if float(row[17]) < 1 and float(row[17]) > 0.89:
+  #         favoriteProfitMatrix[0][2] = favoriteProfitMatrix[0][2] + round(row[21],2)
           
-        #less than .90 so .89 and greater than .79 so .80
-        elif float(row[17]) < 0.90 and float(row[17]) > .79:
-          favoriteProfitMatrix[1][2] = favoriteProfitMatrix[1][2] + round(row[21],2)
+  #       #less than .90 so .89 and greater than .79 so .80
+  #       elif float(row[17]) < 0.90 and float(row[17]) > .79:
+  #         favoriteProfitMatrix[1][2] = favoriteProfitMatrix[1][2] + round(row[21],2)
           
-        elif float(row[17]) < 0.80 and float(row[17]) > .69:
-          favoriteProfitMatrix[2][2] = favoriteProfitMatrix[2][2] + round(row[21],2)
+  #       elif float(row[17]) < 0.80 and float(row[17]) > .69:
+  #         favoriteProfitMatrix[2][2] = favoriteProfitMatrix[2][2] + round(row[21],2)
           
-        elif float(row[17]) < 0.70 and float(row[17]) > .59:
-          favoriteProfitMatrix[3][2] = favoriteProfitMatrix[3][2] + round(row[21],2)
+  #       elif float(row[17]) < 0.70 and float(row[17]) > .59:
+  #         favoriteProfitMatrix[3][2] = favoriteProfitMatrix[3][2] + round(row[21],2)
           
-        elif float(row[17]) < 0.60 and float(row[17]) > .49:
-          favoriteProfitMatrix[4][2] = favoriteProfitMatrix[4][2] + round(row[21],2)
+  #       elif float(row[17]) < 0.60 and float(row[17]) > .49:
+  #         favoriteProfitMatrix[4][2] = favoriteProfitMatrix[4][2] + round(row[21],2)
           
-        elif float(row[17]) < 0.50 and float(row[17]) > .39:
-          favoriteProfitMatrix[5][2] = favoriteProfitMatrix[5][2] + round(row[21],2)
+  #       elif float(row[17]) < 0.50 and float(row[17]) > .39:
+  #         favoriteProfitMatrix[5][2] = favoriteProfitMatrix[5][2] + round(row[21],2)
         
-        elif float(row[17]) < 0.40 and float(row[17]) > .29:
-          favoriteProfitMatrix[6][2] = favoriteProfitMatrix[6][2] + round(row[21],2)
+  #       elif float(row[17]) < 0.40 and float(row[17]) > .29:
+  #         favoriteProfitMatrix[6][2] = favoriteProfitMatrix[6][2] + round(row[21],2)
           
-      if float(row[6]) > .79 and float(row[6]) < .9:
-        print ("rows counted fifth level: " + str(counterHome))
+  #     if float(row[6]) > .79 and float(row[6]) < .9:
+  #       print ("rows counted fifth level: " + str(counterHome))
         
-        #less than 1 so .99 and greater than .89 so .90
-        if float(row[17]) < 1 and float(row[17]) > 0.89:
-          favoriteProfitMatrix[0][3] = favoriteProfitMatrix[0][3] + round(row[21],2)
+  #       #less than 1 so .99 and greater than .89 so .90
+  #       if float(row[17]) < 1 and float(row[17]) > 0.89:
+  #         favoriteProfitMatrix[0][3] = favoriteProfitMatrix[0][3] + round(row[21],2)
           
-        #less than .90 so .89 and greater than .79 so .80
-        elif float(row[17]) < 0.90 and float(row[17]) > .79:
-          favoriteProfitMatrix[1][3] = favoriteProfitMatrix[1][3] + round(row[21],2)
+  #       #less than .90 so .89 and greater than .79 so .80
+  #       elif float(row[17]) < 0.90 and float(row[17]) > .79:
+  #         favoriteProfitMatrix[1][3] = favoriteProfitMatrix[1][3] + round(row[21],2)
           
-        elif float(row[17]) < 0.80 and float(row[17]) > .69:
-          favoriteProfitMatrix[2][3] = favoriteProfitMatrix[2][3] + round(row[21],2)
+  #       elif float(row[17]) < 0.80 and float(row[17]) > .69:
+  #         favoriteProfitMatrix[2][3] = favoriteProfitMatrix[2][3] + round(row[21],2)
           
-        elif float(row[17]) < 0.70 and float(row[17]) > .59:
-          favoriteProfitMatrix[3][3] = favoriteProfitMatrix[3][3] + round(row[21],2)
+  #       elif float(row[17]) < 0.70 and float(row[17]) > .59:
+  #         favoriteProfitMatrix[3][3] = favoriteProfitMatrix[3][3] + round(row[21],2)
           
-        elif float(row[17]) < 0.60 and float(row[17]) > .49:
-          favoriteProfitMatrix[4][3] = favoriteProfitMatrix[4][3] + round(row[21],2)
+  #       elif float(row[17]) < 0.60 and float(row[17]) > .49:
+  #         favoriteProfitMatrix[4][3] = favoriteProfitMatrix[4][3] + round(row[21],2)
           
-        elif float(row[17]) < 0.50 and float(row[17]) > .39:
-          favoriteProfitMatrix[5][3] = favoriteProfitMatrix[5][3] + round(row[21],2)
+  #       elif float(row[17]) < 0.50 and float(row[17]) > .39:
+  #         favoriteProfitMatrix[5][3] = favoriteProfitMatrix[5][3] + round(row[21],2)
         
-        elif float(row[17]) < 0.40 and float(row[17]) > .29:
-          favoriteProfitMatrix[6][3] = favoriteProfitMatrix[6][3] + round(row[21],2)
+  #       elif float(row[17]) < 0.40 and float(row[17]) > .29:
+  #         favoriteProfitMatrix[6][3] = favoriteProfitMatrix[6][3] + round(row[21],2)
           
-      if float(row[6]) > .89 and float(row[6]) < 1:
-        print ("rows counted sixth level: " + str(counterHome))
+  #     if float(row[6]) > .89 and float(row[6]) < 1:
+  #       print ("rows counted sixth level: " + str(counterHome))
         
-        #less than 1 so .99 and greater than .89 so .90
-        if float(row[17]) < 1 and float(row[17]) > 0.89:
-          favoriteProfitMatrix[0][4] = favoriteProfitMatrix[0][4] + round(row[21],2)
+  #       #less than 1 so .99 and greater than .89 so .90
+  #       if float(row[17]) < 1 and float(row[17]) > 0.89:
+  #         favoriteProfitMatrix[0][4] = favoriteProfitMatrix[0][4] + round(row[21],2)
           
-        #less than .90 so .89 and greater than .79 so .80
-        elif float(row[17]) < 0.90 and float(row[17]) > .79:
-          favoriteProfitMatrix[1][4] = favoriteProfitMatrix[1][4] + round(row[21],2)
+  #       #less than .90 so .89 and greater than .79 so .80
+  #       elif float(row[17]) < 0.90 and float(row[17]) > .79:
+  #         favoriteProfitMatrix[1][4] = favoriteProfitMatrix[1][4] + round(row[21],2)
           
-        elif float(row[17]) < 0.80 and float(row[17]) > .69:
-          favoriteProfitMatrix[2][4] = favoriteProfitMatrix[2][4] + round(row[21],2)
+  #       elif float(row[17]) < 0.80 and float(row[17]) > .69:
+  #         favoriteProfitMatrix[2][4] = favoriteProfitMatrix[2][4] + round(row[21],2)
           
-        elif float(row[17]) < 0.70 and float(row[17]) > .59:
-          favoriteProfitMatrix[3][4] = favoriteProfitMatrix[3][4] + round(row[21],2)
+  #       elif float(row[17]) < 0.70 and float(row[17]) > .59:
+  #         favoriteProfitMatrix[3][4] = favoriteProfitMatrix[3][4] + round(row[21],2)
           
-        elif float(row[17]) < 0.60 and float(row[17]) > .49:
-          favoriteProfitMatrix[4][4] = favoriteProfitMatrix[4][4] + round(row[21],2)
+  #       elif float(row[17]) < 0.60 and float(row[17]) > .49:
+  #         favoriteProfitMatrix[4][4] = favoriteProfitMatrix[4][4] + round(row[21],2)
           
-        elif float(row[17]) < 0.50 and float(row[17]) > .39:
-          favoriteProfitMatrix[5][4] = favoriteProfitMatrix[5][4] + round(row[21],2)
+  #       elif float(row[17]) < 0.50 and float(row[17]) > .39:
+  #         favoriteProfitMatrix[5][4] = favoriteProfitMatrix[5][4] + round(row[21],2)
         
-        elif float(row[17]) < 0.40 and float(row[17]) > .29:
-          favoriteProfitMatrix[6][4] = favoriteProfitMatrix[6][4] + round(row[21],2)
+  #       elif float(row[17]) < 0.40 and float(row[17]) > .29:
+  #         favoriteProfitMatrix[6][4] = favoriteProfitMatrix[6][4] + round(row[21],2)
 
-  for row in localCSV:
-    #aways greater with a 538 prediction > .5
-    if float(row[7]) > 0.5:
-      counter = counter + 1
-      print ("away rows counted: " + str(counter))
-      if float(row[7]) >= .5 and float(row[7]) <= .59:
-        print ("away rows counted second level: " + str(counter))
+  # for row in localCSV:
+  #   #aways greater with a 538 prediction > .5
+  #   if float(row[7]) > 0.5:
+  #     counter = counter + 1
+  #     print ("away rows counted: " + str(counter))
+  #     if float(row[7]) >= .5 and float(row[7]) <= .59:
+  #       print ("away rows counted second level: " + str(counter))
         
-        #less than 1 so .99 and greater than .89 so .90
-        if float(row[18]) < 1 and float(row[18]) > 0.89:
-          awayProfitMatrix[0][0] = awayProfitMatrix[0][0] + round(row[21],2)
+  #       #less than 1 so .99 and greater than .89 so .90
+  #       if float(row[18]) < 1 and float(row[18]) > 0.89:
+  #         awayProfitMatrix[0][0] = awayProfitMatrix[0][0] + round(row[21],2)
           
-        #less than .90 so .89 and greater than .79 so .80
-        elif float(row[18]) < 0.90 and float(row[18]) > .79:
-          awayProfitMatrix[1][0] = awayProfitMatrix[1][0] + round(row[21],2)
+  #       #less than .90 so .89 and greater than .79 so .80
+  #       elif float(row[18]) < 0.90 and float(row[18]) > .79:
+  #         awayProfitMatrix[1][0] = awayProfitMatrix[1][0] + round(row[21],2)
           
-        elif float(row[18]) < 0.80 and float(row[18]) > .69:
-          awayProfitMatrix[2][0] = awayProfitMatrix[2][0] + round(row[21],2)
+  #       elif float(row[18]) < 0.80 and float(row[18]) > .69:
+  #         awayProfitMatrix[2][0] = awayProfitMatrix[2][0] + round(row[21],2)
           
-        elif float(row[18]) < 0.70 and float(row[18]) > .59:
-          awayProfitMatrix[3][0] = awayProfitMatrix[3][0] + round(row[21],2)
+  #       elif float(row[18]) < 0.70 and float(row[18]) > .59:
+  #         awayProfitMatrix[3][0] = awayProfitMatrix[3][0] + round(row[21],2)
           
-        elif float(row[18]) < 0.60 and float(row[18]) > .49:
-          awayProfitMatrix[4][0] = awayProfitMatrix[4][0] + round(row[21],2)
+  #       elif float(row[18]) < 0.60 and float(row[18]) > .49:
+  #         awayProfitMatrix[4][0] = awayProfitMatrix[4][0] + round(row[21],2)
           
-        elif float(row[18]) < 0.50 and float(row[18]) > .39:
-          awayProfitMatrix[5][0] = awayProfitMatrix[5][0] + round(row[21],2)
+  #       elif float(row[18]) < 0.50 and float(row[18]) > .39:
+  #         awayProfitMatrix[5][0] = awayProfitMatrix[5][0] + round(row[21],2)
         
-        elif float(row[18]) < 0.40 and float(row[18]) > .29:
-          awayProfitMatrix[6][0] = awayProfitMatrix[6][0] + round(row[21],2)
+  #       elif float(row[18]) < 0.40 and float(row[18]) > .29:
+  #         awayProfitMatrix[6][0] = awayProfitMatrix[6][0] + round(row[21],2)
             
-      if float(row[7]) >= .6 and float(row[7]) <= .69:
-        print ("away rows counted third level: " + str(counter))
+  #     if float(row[7]) >= .6 and float(row[7]) <= .69:
+  #       print ("away rows counted third level: " + str(counter))
         
-        #less than 1 so .99 and greater than .89 so .90
-        if float(row[18]) < 1 and float(row[18]) > 0.89:
-          awayProfitMatrix[0][1] = awayProfitMatrix[0][1] + round(row[21],2)
+  #       #less than 1 so .99 and greater than .89 so .90
+  #       if float(row[18]) < 1 and float(row[18]) > 0.89:
+  #         awayProfitMatrix[0][1] = awayProfitMatrix[0][1] + round(row[21],2)
           
-        #less than .90 so .89 and greater than .79 so .80
-        elif float(row[18]) < 0.90 and float(row[18]) > .79:
-          awayProfitMatrix[1][1] = awayProfitMatrix[1][1] + round(row[21],2)
+  #       #less than .90 so .89 and greater than .79 so .80
+  #       elif float(row[18]) < 0.90 and float(row[18]) > .79:
+  #         awayProfitMatrix[1][1] = awayProfitMatrix[1][1] + round(row[21],2)
           
-        elif float(row[18]) < 0.80 and float(row[18]) > .69:
-          awayProfitMatrix[2][1] = awayProfitMatrix[2][1] + round(row[21],2)
+  #       elif float(row[18]) < 0.80 and float(row[18]) > .69:
+  #         awayProfitMatrix[2][1] = awayProfitMatrix[2][1] + round(row[21],2)
           
-        elif float(row[18]) < 0.70 and float(row[18]) > .59:
-          awayProfitMatrix[3][1] = awayProfitMatrix[3][1] + round(row[21],2)
+  #       elif float(row[18]) < 0.70 and float(row[18]) > .59:
+  #         awayProfitMatrix[3][1] = awayProfitMatrix[3][1] + round(row[21],2)
           
-        elif float(row[18]) < 0.60 and float(row[18]) > .49:
-          awayProfitMatrix[4][1] = awayProfitMatrix[4][1] + round(row[21],2)
+  #       elif float(row[18]) < 0.60 and float(row[18]) > .49:
+  #         awayProfitMatrix[4][1] = awayProfitMatrix[4][1] + round(row[21],2)
           
-        elif float(row[18]) < 0.50 and float(row[18]) > .39:
-          awayProfitMatrix[5][1] = awayProfitMatrix[5][1] + round(row[21],2)
+  #       elif float(row[18]) < 0.50 and float(row[18]) > .39:
+  #         awayProfitMatrix[5][1] = awayProfitMatrix[5][1] + round(row[21],2)
         
-        elif float(row[18]) < 0.40 and float(row[18]) > .29:
-          awayProfitMatrix[6][1] = awayProfitMatrix[6][1] + round(row[21],2)
+  #       elif float(row[18]) < 0.40 and float(row[18]) > .29:
+  #         awayProfitMatrix[6][1] = awayProfitMatrix[6][1] + round(row[21],2)
       
-      if float(row[7]) >= .7 and float(row[7]) <= .79:
-        print ("away rows counted fourth level: " + str(counter))
+  #     if float(row[7]) >= .7 and float(row[7]) <= .79:
+  #       print ("away rows counted fourth level: " + str(counter))
         
-        #less than 1 so .99 and greater than .89 so .90
-        if float(row[18]) < 1 and float(row[18]) > 0.89:
-          awayProfitMatrix[0][2] = awayProfitMatrix[0][2] + round(row[21],2)
+  #       #less than 1 so .99 and greater than .89 so .90
+  #       if float(row[18]) < 1 and float(row[18]) > 0.89:
+  #         awayProfitMatrix[0][2] = awayProfitMatrix[0][2] + round(row[21],2)
           
-        #less than .90 so .89 and greater than .79 so .80
-        elif float(row[18]) < 0.90 and float(row[18]) > .79:
-          awayProfitMatrix[1][2] = awayProfitMatrix[1][2] + round(row[21],2)
+  #       #less than .90 so .89 and greater than .79 so .80
+  #       elif float(row[18]) < 0.90 and float(row[18]) > .79:
+  #         awayProfitMatrix[1][2] = awayProfitMatrix[1][2] + round(row[21],2)
           
-        elif float(row[18]) < 0.80 and float(row[18]) > .69:
-          awayProfitMatrix[2][2] = awayProfitMatrix[2][2] + round(row[21],2)
+  #       elif float(row[18]) < 0.80 and float(row[18]) > .69:
+  #         awayProfitMatrix[2][2] = awayProfitMatrix[2][2] + round(row[21],2)
           
-        elif float(row[18]) < 0.70 and float(row[18]) > .59:
-          awayProfitMatrix[3][2] = awayProfitMatrix[3][2] + round(row[21],2)
+  #       elif float(row[18]) < 0.70 and float(row[18]) > .59:
+  #         awayProfitMatrix[3][2] = awayProfitMatrix[3][2] + round(row[21],2)
           
-        elif float(row[18]) < 0.60 and float(row[18]) > .49:
-          awayProfitMatrix[4][2] = awayProfitMatrix[4][2] + round(row[21],2)
+  #       elif float(row[18]) < 0.60 and float(row[18]) > .49:
+  #         awayProfitMatrix[4][2] = awayProfitMatrix[4][2] + round(row[21],2)
           
-        elif float(row[18]) < 0.50 and float(row[18]) > .39:
-          awayProfitMatrix[5][2] = awayProfitMatrix[5][2] + round(row[21],2)
+  #       elif float(row[18]) < 0.50 and float(row[18]) > .39:
+  #         awayProfitMatrix[5][2] = awayProfitMatrix[5][2] + round(row[21],2)
         
-        elif float(row[18]) < 0.40 and float(row[18]) > .29:
-          awayProfitMatrix[6][2] = awayProfitMatrix[6][2] + round(row[21],2)
+  #       elif float(row[18]) < 0.40 and float(row[18]) > .29:
+  #         awayProfitMatrix[6][2] = awayProfitMatrix[6][2] + round(row[21],2)
           
-      if float(row[7]) >= .8 and float(row[7]) <= .89:
-        print ("away rows counted fifth level: " + str(counter))
+  #     if float(row[7]) >= .8 and float(row[7]) <= .89:
+  #       print ("away rows counted fifth level: " + str(counter))
         
-        #less than 1 so .99 and greater than .89 so .90
-        if float(row[18]) < 1 and float(row[18]) > 0.89:
-          awayProfitMatrix[0][3] = awayProfitMatrix[0][3] + round(row[21],2)
+  #       #less than 1 so .99 and greater than .89 so .90
+  #       if float(row[18]) < 1 and float(row[18]) > 0.89:
+  #         awayProfitMatrix[0][3] = awayProfitMatrix[0][3] + round(row[21],2)
           
-        #less than .90 so .89 and greater than .79 so .80
-        elif float(row[18]) < 0.90 and float(row[18]) > .79:
-          awayProfitMatrix[1][3] = awayProfitMatrix[1][3] + round(row[21],2)
+  #       #less than .90 so .89 and greater than .79 so .80
+  #       elif float(row[18]) < 0.90 and float(row[18]) > .79:
+  #         awayProfitMatrix[1][3] = awayProfitMatrix[1][3] + round(row[21],2)
           
-        elif float(row[18]) < 0.80 and float(row[18]) > .69:
-          awayProfitMatrix[2][3] = awayProfitMatrix[2][3] + round(row[21],2)
+  #       elif float(row[18]) < 0.80 and float(row[18]) > .69:
+  #         awayProfitMatrix[2][3] = awayProfitMatrix[2][3] + round(row[21],2)
           
-        elif float(row[18]) < 0.70 and float(row[18]) > .59:
-          awayProfitMatrix[3][3] = awayProfitMatrix[3][3] + round(row[21],2)
+  #       elif float(row[18]) < 0.70 and float(row[18]) > .59:
+  #         awayProfitMatrix[3][3] = awayProfitMatrix[3][3] + round(row[21],2)
           
-        elif float(row[18]) < 0.60 and float(row[18]) > .49:
-          awayProfitMatrix[4][3] = awayProfitMatrix[4][3] + round(row[21],2)
+  #       elif float(row[18]) < 0.60 and float(row[18]) > .49:
+  #         awayProfitMatrix[4][3] = awayProfitMatrix[4][3] + round(row[21],2)
           
-        elif float(row[18]) < 0.50 and float(row[18]) > .39:
-          awayProfitMatrix[5][3] = awayProfitMatrix[5][3] + round(row[21],2)
+  #       elif float(row[18]) < 0.50 and float(row[18]) > .39:
+  #         awayProfitMatrix[5][3] = awayProfitMatrix[5][3] + round(row[21],2)
         
-        elif float(row[18]) < 0.40 and float(row[18]) > .29:
-          awayProfitMatrix[6][3] = awayProfitMatrix[6][3] + round(row[21],2)
+  #       elif float(row[18]) < 0.40 and float(row[18]) > .29:
+  #         awayProfitMatrix[6][3] = awayProfitMatrix[6][3] + round(row[21],2)
           
-      if float(row[7]) >= .9 and float(row[7]) <= 1:
-        print ("away rows counted sixth level: " + str(counter))
+  #     if float(row[7]) >= .9 and float(row[7]) <= 1:
+  #       print ("away rows counted sixth level: " + str(counter))
         
-        #less than 1 so .99 and greater than .89 so .90
-        if float(row[18]) < 1 and float(row[18]) > 0.89:
-          awayProfitMatrix[0][4] = awayProfitMatrix[0][4] + round(row[21],2)
+  #       #less than 1 so .99 and greater than .89 so .90
+  #       if float(row[18]) < 1 and float(row[18]) > 0.89:
+  #         awayProfitMatrix[0][4] = awayProfitMatrix[0][4] + round(row[21],2)
           
-        #less than .90 so .89 and greater than .79 so .80
-        elif float(row[18]) < 0.90 and float(row[18]) > .79:
-          awayProfitMatrix[1][4] = awayProfitMatrix[1][4] + round(row[21],2)
+  #       #less than .90 so .89 and greater than .79 so .80
+  #       elif float(row[18]) < 0.90 and float(row[18]) > .79:
+  #         awayProfitMatrix[1][4] = awayProfitMatrix[1][4] + round(row[21],2)
           
-        elif float(row[18]) < 0.80 and float(row[18]) > .69:
-          awayProfitMatrix[2][4] = awayProfitMatrix[2][4] + round(row[21],2)
+  #       elif float(row[18]) < 0.80 and float(row[18]) > .69:
+  #         awayProfitMatrix[2][4] = awayProfitMatrix[2][4] + round(row[21],2)
           
-        elif float(row[18]) < 0.70 and float(row[18]) > .59:
-          awayProfitMatrix[3][4] = awayProfitMatrix[3][4] + round(row[21],2)
+  #       elif float(row[18]) < 0.70 and float(row[18]) > .59:
+  #         awayProfitMatrix[3][4] = awayProfitMatrix[3][4] + round(row[21],2)
           
-        elif float(row[18]) < 0.60 and float(row[18]) > .49:
-          awayProfitMatrix[4][4] = awayProfitMatrix[4][4] + round(row[21],2)
+  #       elif float(row[18]) < 0.60 and float(row[18]) > .49:
+  #         awayProfitMatrix[4][4] = awayProfitMatrix[4][4] + round(row[21],2)
           
-        elif float(row[18]) < 0.50 and float(row[18]) > .39:
-          awayProfitMatrix[5][4] = awayProfitMatrix[5][4] + round(row[21],2)
+  #       elif float(row[18]) < 0.50 and float(row[18]) > .39:
+  #         awayProfitMatrix[5][4] = awayProfitMatrix[5][4] + round(row[21],2)
         
-        elif float(row[18]) < 0.40 and float(row[18]) > .29:
-          awayProfitMatrix[6][4] = awayProfitMatrix[6][4] + round(row[21],2)
+  #       elif float(row[18]) < 0.40 and float(row[18]) > .29:
+  #         awayProfitMatrix[6][4] = awayProfitMatrix[6][4] + round(row[21],2)
        
   print(awayProfitMatrix)
   print(favoriteProfitMatrix)
