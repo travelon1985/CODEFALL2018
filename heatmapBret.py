@@ -558,12 +558,12 @@ def heatMapGeneratorAll(favoriteMatrix):
 def setup():
   #implied()
   countBinner(reader)
-  awayCountBinnerOnlyAway(reader)
-  edgeDictionary()
-  edgeCalculator(homeFiveThirtyEightProb, homeImpliedProb)
+  #awayCountBinnerOnlyAway(reader)
+  #edgeDictionary()
+  #edgeCalculator(homeFiveThirtyEightProb, homeImpliedProb)
   #edgeBinner(homeEdge)
   heatMapGenerator(favoriteMatrix)
-  heatMapGeneratorAway(favoriteMatrixA)
+  #heatMapGeneratorAway(favoriteMatrixA)
     
     
   
