@@ -4,7 +4,7 @@ import plotly
 import plotly.plotly as py
 import plotly.graph_objs as go
 
-plotly.tools.set_credentials_file(username = "dataVisualizationTeam", api_key = "rjGVnSpfjvSwkrGU7nXd")
+plotly.tools.set_credentials_file(username = "dataVIZ2", api_key = "4TeEmzMDVNmPdZ9SzzwR")
 
 file = ("1finaldata.csv")
 print (file)
@@ -450,7 +450,122 @@ def binner2(localCSV, favoriteMatrix, awayMatrix):
 #   print(awayMatrix)
 #   print (favoriteMatrix)
 
-def profitBinner2(localCSV, favoriteProfitMatrix, awayProfitMatrix):
+def profitBinnerHome2(localCSV, favoriteProfitMatrix, awayProfitMatrix):
+  for row in localCSV:
+    fiveThirtyHome = float(row[6])
+    impliedProbHome = float(row[17])
+    homeProfit = float(row[20])
+    if fiveThirtyHome >= 0.5:
+#five thirty eight home prob between .90 and 1 (>=.90 and <1)
+      if fiveThirtyHome >= 0.9 and fiveThirtyHome < 1:
+        if impliedProbHome >= 0.9 and impliedProbHome < 1:
+          favoriteProfitMatrix[0][4] = favoriteProfitMatrix[0][4] + homeProfit
+
+        elif impliedProbHome >= 0.8 and impliedProbHome < 0.89999:
+          favoriteProfitMatrix[1][4] = favoriteProfitMatrix[1][4] + homeProfit
+
+        elif impliedProbHome >= 0.7 and impliedProbHome < 0.79999:
+          favoriteProfitMatrix[2][4] = favoriteProfitMatrix[2][4] + homeProfit
+
+        elif impliedProbHome >= 0.6 and impliedProbHome < 0.69999:
+          favoriteProfitMatrix[3][4] = favoriteProfitMatrix[3][4] + homeProfit
+
+        elif impliedProbHome >= 0.5 and impliedProbHome < 0.59999:
+          favoriteProfitMatrix[4][4] = favoriteProfitMatrix[4][4] + homeProfit
+
+        elif impliedProbHome >= 0.4 and impliedProbHome < 0.49999:
+          favoriteProfitMatrix[5][4] = favoriteProfitMatrix[5][4] + homeProfit
+
+        elif impliedProbHome >= 0.3 and impliedProbHome < 0.39999:
+          favoriteProfitMatrix[6][4] = favoriteProfitMatrix[6][4] + homeProfit
+# #five thirty eight home probability between 80 and 8999 percent
+      if fiveThirtyHome >= 0.8 and fiveThirtyHome < .89999:
+        if impliedProbHome >= 0.9 and impliedProbHome < 1:
+          favoriteProfitMatrix[0][3] = favoriteProfitMatrix[0][3] + homeProfit
+
+        elif impliedProbHome >= 0.8 and impliedProbHome < 0.89999:
+          favoriteProfitMatrix[1][3] = favoriteProfitMatrix[1][3] + homeProfit
+
+        elif impliedProbHome >= 0.7 and impliedProbHome < 0.79999:
+          favoriteProfitMatrix[2][3] = favoriteProfitMatrix[2][3] + homeProfit
+
+        elif impliedProbHome >= 0.6 and impliedProbHome < 0.69999:
+          favoriteProfitMatrix[3][3] = favoriteProfitMatrix[3][3] + homeProfit
+
+        elif impliedProbHome >= 0.5 and impliedProbHome < 0.59999:
+          favoriteProfitMatrix[4][3] = favoriteProfitMatrix[4][3] + homeProfit
+
+        elif impliedProbHome >= 0.4 and impliedProbHome < 0.49999:
+          favoriteProfitMatrix[5][3] = favoriteProfitMatrix[5][3] + homeProfit
+
+        elif impliedProbHome >= 0.3 and impliedProbHome < 0.39999:
+          favoriteProfitMatrix[6][3] = favoriteProfitMatrix[6][3] + homeProfit
+# #five thirty eight home probability between 70 and 7999 percent
+      if fiveThirtyHome >= 0.7 and fiveThirtyHome < .79999:
+        if impliedProbHome >= 0.9 and impliedProbHome < 1:
+          favoriteProfitMatrix[0][2] = favoriteProfitMatrix[0][2] + homeProfit
+
+        elif impliedProbHome >= 0.8 and impliedProbHome < 0.89999:
+          favoriteProfitMatrix[1][2] = favoriteProfitMatrix[1][2] + homeProfit
+
+        elif impliedProbHome >= 0.7 and impliedProbHome < 0.79999:
+          favoriteProfitMatrix[2][2] = favoriteProfitMatrix[2][2] + homeProfit
+
+        elif impliedProbHome >= 0.6 and impliedProbHome < 0.69999:
+          favoriteProfitMatrix[3][2] = favoriteProfitMatrix[3][2] + homeProfit
+
+        elif impliedProbHome >= 0.5 and impliedProbHome < 0.59999:
+          favoriteProfitMatrix[4][2] = favoriteProfitMatrix[4][2] + homeProfit
+
+        elif impliedProbHome >= 0.4 and impliedProbHome < 0.49999:
+          favoriteProfitMatrix[5][2] = favoriteProfitMatrix[5][2] + homeProfit
+
+        elif impliedProbHome >= 0.3 and impliedProbHome < 0.39999:
+          favoriteProfitMatrix[6][2] = favoriteProfitMatrix[6][2] + homeProfit
+# #five thirty eight home probability between 60 and 6999 percent
+      if fiveThirtyHome >= 0.6 and fiveThirtyHome < .69999:
+        if impliedProbHome >= 0.9 and impliedProbHome < 1:
+          favoriteProfitMatrix[0][1] = favoriteProfitMatrix[0][1] + homeProfit
+
+        elif impliedProbHome >= 0.8 and impliedProbHome < 0.89999:
+          favoriteProfitMatrix[1][1] = favoriteProfitMatrix[1][1] + homeProfit
+
+        elif impliedProbHome >= 0.7 and impliedProbHome < 0.79999:
+          favoriteProfitMatrix[2][1] = favoriteProfitMatrix[2][1] + homeProfit
+
+        elif impliedProbHome >= 0.6 and impliedProbHome < 0.69999:
+          favoriteProfitMatrix[3][1] = favoriteProfitMatrix[3][1] + homeProfit
+
+        elif impliedProbHome >= 0.5 and impliedProbHome < 0.59999:
+          favoriteProfitMatrix[4][1] = favoriteProfitMatrix[4][1] + homeProfit
+
+        elif impliedProbHome >= 0.4 and impliedProbHome < 0.49999:
+          favoriteProfitMatrix[5][1] = favoriteProfitMatrix[5][1] + homeProfit
+
+        elif impliedProbHome >= 0.3 and impliedProbHome < 0.39999:
+          favoriteProfitMatrix[6][1] = favoriteProfitMatrix[6][1] + homeProfit
+# #five thirty eight home probability between 50 and 5999 percent
+      if fiveThirtyHome >= 0.5 and fiveThirtyHome < .59999:
+        if impliedProbHome >= 0.9 and impliedProbHome < 1:
+          favoriteProfitMatrix[0][0] = favoriteProfitMatrix[0][0] + homeProfit
+
+        elif impliedProbHome >= 0.8 and impliedProbHome < 0.89999:
+          favoriteProfitMatrix[1][0] = favoriteProfitMatrix[1][0] + homeProfit
+
+        elif impliedProbHome >= 0.7 and impliedProbHome < 0.79999:
+          favoriteProfitMatrix[2][0] = favoriteProfitMatrix[2][0] + homeProfit
+
+        elif impliedProbHome >= 0.6 and impliedProbHome < 0.69999:
+          favoriteProfitMatrix[3][0] = favoriteProfitMatrix[3][0] + homeProfit
+
+        elif impliedProbHome >= 0.5 and impliedProbHome < 0.59999:
+          favoriteProfitMatrix[4][0] = favoriteProfitMatrix[4][0] + homeProfit
+
+        elif impliedProbHome >= 0.4 and impliedProbHome < 0.49999:
+          favoriteProfitMatrix[5][0] = favoriteProfitMatrix[5][0] + homeProfit
+
+        elif impliedProbHome >= 0.3 and impliedProbHome < 0.39999:
+          favoriteProfitMatrix[6][0] = favoriteProfitMatrix[6][0] + homeProfit
   # for row in localCSV:
   #     #homes greater with a 538 prediction > .5
   #   if float(row[6]) > 0.5:
@@ -723,7 +838,7 @@ def profitBinner2(localCSV, favoriteProfitMatrix, awayProfitMatrix):
   #       elif float(row[18]) < 0.40 and float(row[18]) > .29:
   #         awayProfitMatrix[6][4] = awayProfitMatrix[6][4] + round(row[21],2)
        
-  print(awayProfitMatrix)
+  #print(awayProfitMatrix)
   print(favoriteProfitMatrix)
       #away
       #if row[7] > .5:
@@ -778,44 +893,45 @@ def edgeBinner(dict1):
 def heatMapGenerators(favoriteMatrix,awayMatrix, favoriteProfitMatrix, awayProfitMatrix):
   traceHome = go.Heatmap(z=favoriteMatrix,
                      x=['.5-.59','.6-.69','.7-.79','.8-.89','.9-.99'],
-                     y=['.3-.39','.4-.49','.5-.59','.6-.69','.7-.79','.8-.89','.9-.99']
+                     
+                     y=['.9-.99','.8-.89','.7-.79','.6-.69','.5-.59','.4-.49','.3-.39']
                     )          
                       
   dataHome = [traceHome]
 
 
-  traceAway = go.Heatmap(z=awayMatrix,
-                   x=['.5-.59','.6-.69','.7-.79','.8-.89','.9-.99'],
-                   y=['.3-.39','.4-.49','.5-.59','.6-.69','.7-.79','.8-.89','.9-.99']
-                  )          
+  # traceAway = go.Heatmap(z=awayMatrix,
+  #                  x=['.5-.59','.6-.69','.7-.79','.8-.89','.9-.99'],
+  #                  y=['.3-.39','.4-.49','.5-.59','.6-.69','.7-.79','.8-.89','.9-.99']
+  #                 )          
                     
-  dataAway = [traceAway]
+  # dataAway = [traceAway]
 
   traceHomeProf = go.Heatmap(z=favoriteProfitMatrix,
                      x=['.5-.59','.6-.69','.7-.79','.8-.89','.9-.99'],
-                     y=['.3-.39','.4-.49','.5-.59','.6-.69','.7-.79','.8-.89','.9-.99']
+                     y=['.9-.99','.8-.89','.7-.79','.6-.69','.5-.59','.4-.49','.3-.39']
                     )          
                       
   dataHomeProf = [traceHomeProf]
 
-  traceAwayProf = go.Heatmap(z=awayProfitMatrix,
-                     x=['.5-.59','.6-.69','.7-.79','.8-.89','.9-.99'],
-                     y=['.3-.39','.4-.49','.5-.59','.6-.69','.7-.79','.8-.89','.9-.99']
-                    )          
+  # traceAwayProf = go.Heatmap(z=awayProfitMatrix,
+  #                    x=['.5-.59','.6-.69','.7-.79','.8-.89','.9-.99'],
+  #                    y=['.3-.39','.4-.49','.5-.59','.6-.69','.7-.79','.8-.89','.9-.99']
+  #                   )          
                       
-  dataAwayProf = [traceAwayProf]
+  # dataAwayProf = [traceAwayProf]
 
-  py.iplot(dataHome, filename = 'HomeCountV2')  
-  py.iplot(dataAway, filename = 'AwayCountV2')  
-  py.iplot(dataHomeProf, filename = 'HomeProfitV1')
-  py.iplot(dataAwayProf, filename = 'AwayProfitV1')  
+  py.iplot(dataHome, filename = 'HomeCountV3')  
+  #py.iplot(dataAway, filename = 'AwayCountV2')  
+  py.iplot(dataHomeProf, filename = 'HomeProfitV2')
+  #py.iplot(dataAwayProf, filename = 'AwayProfitV1')  
 
 def checker(favoriteMatrix):
   summer = 0
   for row in favoriteMatrix:
     for index in row:
       summer += int(index)
-  print ("the number of games in favoriteMatrix is: " + str(summer))
+  print ("the number of games in " + str(favoriteMatrix) + " is: " + str(summer))
 
 def setup():
   favoriteMatrix = [[0,0,0,0,0], 
@@ -852,9 +968,9 @@ def setup():
 
   createLocalCSV()
   binner2(localCSV, favoriteMatrix, awayMatrix)
-  checker(favoriteMatrix)
-  #profitCalculator(betSize)
-  #profitBinner(reader,favoriteProfitMatrix, awayProfitMatrix)
+  #checker(favoriteMatrix)
+  profitCalculator(betSize)
+  profitBinnerHome2(localCSV,favoriteProfitMatrix, awayProfitMatrix)
   #edgeDictionary()
   #edgeCalculator(homeFiveThirtyEightProb, homeImpliedProb)
   #edgeBinner(homeEdge)
